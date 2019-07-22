@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  creationTimestamp: 2019-06-21T20:42:19Z
+  name: flux
+  namespace: default
+  resourceVersion: "822568"
+  selfLink: /api/v1/namespaces/default/serviceaccounts/flux
+  uid: 107099b1-9465-11e9-8cd4-42010a80012c
+secrets:
+- name: flux-token-m48cf
