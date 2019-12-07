@@ -1,0 +1,5 @@
+version: 3
+projects:
+ - dir: <DIR>
+  autoplan:
+    when_modified: ["./modules/**/.tf*", "*.tf"]
