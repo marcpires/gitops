@@ -1,5 +1,0 @@
-version: 3
-projects:
- - dir: ./environments
-   autoplan:
-    when_modified: ["./modules/**/.tf*", "*.tf"]
