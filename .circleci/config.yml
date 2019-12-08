@@ -5,4 +5,4 @@ orbs:
 workflows:
   build:
     jobs:
-     - gitops/build
+     - gitops/terraform-plan
