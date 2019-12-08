@@ -1,0 +1,8 @@
+version: 2.1
+orbs:
+  gitops: gitops/pipeline-lib@dev:0.1.0-rc1
+
+workflows:
+  build:
+    jobs:
+     - gitops/build
