@@ -1,0 +1,8 @@
+version: 2.1
+orbs:
+  gitops: gitops/pipeline-lib@dev:1.1.1-rc1
+  
+workflows:
+  build:
+    jobs:
+     - gitops/terraform-plan
