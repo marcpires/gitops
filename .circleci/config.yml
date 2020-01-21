@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  gitops: gitops/pipeline-lib@dev:1.1.1-rc10
+  gitops: gitops/pipeline-lib@dev:1.1.1-rc11
   
 workflows:
   build:
