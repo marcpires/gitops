@@ -41,5 +41,5 @@ spec:
               mountPath: /data
 
       volumes:
-        - name: gogs-home
+        - name: mattermost-home
           emptyDir: {}
