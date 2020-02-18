@@ -1,0 +1,1 @@
+{"jobID":"d97641e6-a98a-0c71-4dab-91ba3e7c8818","spec":{"type":"policy","cause":{"Message":"","User":"Marcelo Pires \u003cmarcpiresrj@gmail.com\u003e"},"spec":{"default:deployment/bets":{"add":{"automated":"true"},"remove":{}}}},"result":null}
