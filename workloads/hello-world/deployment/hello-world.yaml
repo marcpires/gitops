@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hello-world
+  annotations:
+    fluxcd.io/automated: "true"
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: hello-world
+        app: hello-world
+    namespace: default
+    spec:
+      containers:
+        - name: hello-world
+          image: hello-world
+          resources:
+            requests: 
+              cpu: 20m
+              memory: 50Mi
+            limits:
+              cpu: 20m
+              memory: 30Mi
+
+
+
