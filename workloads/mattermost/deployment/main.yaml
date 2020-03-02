@@ -8,7 +8,7 @@ metadata:
   name: mattermost
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.mattermost: glob:~5.14
+    fluxcd.io/tag.mattermost: semver:~5.14
 spec:
   replicas: 1
   selector:
@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: mattermost
-        image: mattermost/mattermost-preview
+        image: mattermost/mattermost-preview:5.14.0
          # resources:
          #   requests:
          #     memory: "5Mi"
