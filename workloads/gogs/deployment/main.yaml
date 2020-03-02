@@ -1,7 +1,11 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: gogs
+  annotations:
+    fluxcd.io/locked: 'true'
+    fluxcd.io/locked_user: Marcelo Pires <marcpiresrj@gmail.com>
 spec:
   replicas: 1
   selector:
@@ -14,8 +18,8 @@ spec:
 
     spec:
       containers:
-        - name: gogs
-          image: gogs/gogs:latest
+      - name: gogs
+        image: gogs/gogs:latest
          # resources:
          #   requests:
          #     memory: "5Mi"
@@ -23,20 +27,20 @@ spec:
          #   limits:
          #     memory: "10Mi"
          #     cpu: "20m"
-          env:
-          - name: USER_UID
-            value: "1000"
-          - name: USER_GID
-            value: "1000"
-          ports:
-            - name: http-port
-              containerPort: 3000
-            - name: ssh-port
-              containerPort: 22
-          volumeMounts:
-            - name: gogs-home
-              mountPath: /data
+        env:
+        - name: USER_UID
+          value: "1000"
+        - name: USER_GID
+          value: "1000"
+        ports:
+        - name: http-port
+          containerPort: 3000
+        - name: ssh-port
+          containerPort: 22
+        volumeMounts:
+        - name: gogs-home
+          mountPath: /data
 
       volumes:
-        - name: gogs-home
-          emptyDir: {}
+      - name: gogs-home
+        emptyDir: {}
