@@ -1,0 +1,1 @@
+{"jobID":"a373b1fa-5c24-bd06-22c1-1cfbec866cae","spec":{"type":"policy","cause":{"Message":"","User":"Marcelo Pires \u003cmarcpiresrj@gmail.com\u003e"},"spec":{"default:deployment/mattermost":{"add":{"tag_all":"glob:5.14.*"},"remove":{}}}},"result":null}
