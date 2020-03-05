@@ -3,11 +3,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: gogs
-  annotations:
-    #fluxcd.io/automated: "true"
-    #fluxcd.io/tag.mattermost: semver:~0.11
-    #fluxcd.io/locked: 'true'
-    #fluxcd.io/locked_user: Marcelo Pires <marcpiresrj@gmail.com>
 spec:
   replicas: 1
   selector:
