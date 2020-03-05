@@ -1,0 +1,1 @@
+{"jobID":"623450a3-6f3c-8084-6b49-819d09c03d3b","spec":{"type":"policy","cause":{"Message":"Unlocking via fluxctl","User":"Marcelo Pires \u003cmarcpiresrj@gmail.com\u003e"},"spec":{"default:deployment/gogs":{"add":{},"remove":{"locked":"true","locked_msg":"true","locked_user":"true"}}}},"result":null}
