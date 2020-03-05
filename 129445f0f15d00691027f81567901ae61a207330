@@ -1,0 +1,1 @@
+{"jobID":"80911535-2589-3f1b-085f-91ad0034a2c4","spec":{"type":"policy","cause":{"Message":"locking via fluxctl","User":"Marcelo Pires \u003cmarcpiresrj@gmail.com\u003e"},"spec":{"default:deployment/bets":{"add":{"locked":"true","locked_msg":"locking via fluxctl","locked_user":"Marcelo Pires \u003cmarcpiresrj@gmail.com\u003e"},"remove":{}}}},"result":null}
