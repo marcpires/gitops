@@ -9,6 +9,8 @@ metadata:
   annotations:
     fluxcd.io/automated: "true"
     fluxcd.io/tag.mattermost: semver:~5.14
+    #fluxcd.io/ignore: true
+    #fluxcd.io/locked: true
 spec:
   replicas: 1
   selector:

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: gogs
-        image: gogs/gogs:latest
+        image: gogs/gogs:0.11.91
          # resources:
          #   requests:
          #     memory: "5Mi"
