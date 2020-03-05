@@ -1,0 +1,1 @@
+{"jobID":"ebe51f4f-1d14-80cb-ddf6-92f7dfdd70e1","spec":{"type":"policy","cause":{"Message":"Unlocking bets","User":"Marcelo Pires \u003cmarcpiresrj@gmail.com\u003e"},"spec":{"default:deployment/bets":{"add":{},"remove":{"locked":"true","locked_msg":"true","locked_user":"true"}}}},"result":null}
