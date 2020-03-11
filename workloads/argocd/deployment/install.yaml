@@ -2184,6 +2184,7 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: argocd-application-controller
+    namespace: argocd    
     spec:
       containers:
       - command:
@@ -2227,6 +2228,7 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: argocd-dex-server
+    namespace: argocd
     spec:
       containers:
       - command:
@@ -2273,6 +2275,7 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: argocd-redis
+    namespace: argocd    
     spec:
       containers:
       - args:
@@ -2302,6 +2305,7 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: argocd-repo-server
+    namespace: argocd    
     spec:
       automountServiceAccountToken: false
       containers:
@@ -2355,6 +2359,7 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: argocd-server
+    namespace: argocd
     spec:
       containers:
       - command:
