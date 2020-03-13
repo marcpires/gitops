@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: friday
+spec:
+  replicas: 1
+  template:
+    metadata: 
+      labels:
+        name: friday
+        app: friday
+    namespace: friday
+    spec:
+      containers:
+        - name: friday
+          image: testdriveninfra/friday:1.0.2
+          resources:
+            requests: 
+              cpu: 20m
+              memory: 50Mi
+            limits:
+              cpu: 20m
+              memory: 30Mi
+
+
+
