@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -5,6 +6,9 @@ metadata:
     version: v1
     app: players
   name: players
+  annotations:
+    fluxcd.io/locked: 'true'
+    fluxcd.io/locked_user: Marcelo Pires <marcpiresrj@gmail.com>
 spec:
   replicas: 2
   revisionHistoryLimit: 2
@@ -21,29 +25,29 @@ spec:
         language: golang
     spec:
       containers:
-        - image: claudioed/players:latest
-          imagePullPolicy: Always
-          resources:
-            requests:
-              memory: "5Mi"
-              cpu: "10m"
-            limits:
-              memory: "10Mi"
-              cpu: "20m"
-          livenessProbe:
-            httpGet:
-              path: /health
-              port: 9999
-              scheme: HTTP
-            initialDelaySeconds: 1
-          name: players
-          ports:
-            - containerPort: 9999
-              name: http
-              protocol: TCP
-          readinessProbe:
-            httpGet:
-              path: /health
-              port: 9999
-              scheme: HTTP
-            initialDelaySeconds: 1
+      - image: claudioed/players:latest
+        imagePullPolicy: Always
+        resources:
+          requests:
+            memory: "5Mi"
+            cpu: "10m"
+          limits:
+            memory: "10Mi"
+            cpu: "20m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 9999
+            scheme: HTTP
+          initialDelaySeconds: 1
+        name: players
+        ports:
+        - containerPort: 9999
+          name: http
+          protocol: TCP
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 9999
+            scheme: HTTP
+          initialDelaySeconds: 1
