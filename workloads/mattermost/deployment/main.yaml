@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: mattermost
-        image: mattermost/mattermost-preview:5.18.0-rc1
+        image: mattermost/mattermost-preview:5.14.0
          # resources:
          #   requests:
          #     memory: "5Mi"
