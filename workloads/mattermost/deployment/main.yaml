@@ -8,7 +8,7 @@ metadata:
   name: mattermost
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.mattermost: semver:~5.18
+    fluxcd.io/tag.mattermost: semver:~5.14
     #fluxcd.io/ignore: true
     #fluxcd.io/locked: true
 spec:
