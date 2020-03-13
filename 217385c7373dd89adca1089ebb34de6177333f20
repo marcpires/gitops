@@ -1,0 +1,1 @@
+{"jobID":"b543e12e-1abf-17a3-2ef6-6a4b11d07ab4","spec":{"type":"policy","cause":{"Message":"","User":"Marcelo Pires \u003cmarcpiresrj@gmail.com\u003e"},"spec":{"default:deployment/players":{"add":{"locked":"true","locked_msg":"","locked_user":"Marcelo Pires \u003cmarcpiresrj@gmail.com\u003e"},"remove":{}}}},"result":null}
