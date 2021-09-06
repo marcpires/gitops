@@ -7,4 +7,5 @@ Exemplos com manifestos utilizados durante a apresentação **GitOps: Operaçõe
 * **Daitan University**: 13/03/2020
 * **OpenLabs Week**: 30/03/2020
 
+
 (c) 2020 Marcelo S. Pires
