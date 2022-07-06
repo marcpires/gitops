@@ -9,8 +9,11 @@ spec:
       labels:
         name: friday
         app: friday
-    namespace: friday
+    namespace: default
     spec:
+     selector:
+      matchLabels:
+      app: friday
       containers:
         - name: friday
           image: testdriveninfra/friday:1.0.2
