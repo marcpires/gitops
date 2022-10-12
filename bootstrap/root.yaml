@@ -20,7 +20,7 @@ spec:
     kind: Application
   project: default
   source:
-    path: cluster\projects
+    path: projects
     repoURL: https://github.com/marcpires/gitops.git
   syncPolicy:
     automated:

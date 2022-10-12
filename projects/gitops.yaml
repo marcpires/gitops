@@ -6,13 +6,13 @@ metadata:
     argocd.argoproj.io/sync-options: PruneLast=true
     argocd.argoproj.io/sync-wave: "-2"
   creationTimestamp: null
-  name: testing
+  name: gitops
   namespace: argocd
 spec:
   clusterResourceWhitelist:
   - group: '*'
     kind: '*'
-  description: testing project
+  description: gitops project
   destinations:
   - namespace: '*'
     server: '*'
@@ -30,13 +30,13 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
   creationTimestamp: null
-  name: testing
+  name: gitops
   namespace: argocd
 spec:
   generators:
   - git:
       files:
-      - path: cluster\apps\**\testing\config.json
+      - path: apps\**\gitops\config.json
       repoURL: https://github.com/marcpires/gitops.git
       requeueAfterSeconds: 20
       revision: ""
@@ -49,7 +49,7 @@ spec:
             repoURL: ""
   - git:
       files:
-      - path: cluster\apps\**\testing\config_dir.json
+      - path: apps\**\gitops\config_dir.json
       repoURL: https://github.com/marcpires/gitops.git
       requeueAfterSeconds: 20
       revision: ""
@@ -71,7 +71,7 @@ spec:
       labels:
         app.kubernetes.io/managed-by: argocd-autopilot
         app.kubernetes.io/name: '{{ appName }}'
-      name: testing-{{ userGivenName }}
+      name: gitops-{{ userGivenName }}
       namespace: argocd
     spec:
       destination:
@@ -82,7 +82,7 @@ spec:
         jsonPointers:
         - /status
         kind: Application
-      project: testing
+      project: gitops
       source:
         path: '{{ srcPath }}'
         repoURL: '{{ srcRepoURL }}'
