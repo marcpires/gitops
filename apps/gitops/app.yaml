@@ -12,7 +12,7 @@ spec:
        - path: envs/*
   template:
       metadata:
-        name: '{{path.basename}}'
+        name: '{{path.[0]}}'
       spec:
         project: default
 
