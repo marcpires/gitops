@@ -3,23 +3,26 @@ kind: ApplicationSet
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
-  name: root-application
+  name: root-application-set
   namespace: argocd
 spec:
   generators:
   - git:
       repoURL: https://github.com/marcpires/gitops.git
       revision: HEAD
-      directories: envs/*
-       - path:
+      directories:
+       - path: envs/*
       template:
         metadata: '{{path.basename}}'
         spec:
           project: default
+
+          #Application source
           source:
             repoURL: "https://github.com/marcpires/gitops.git"
             targetRevision: HEAD
             path: '{{path}}'
+          # Destination  
           destination:
             server: https://kubernetes.default.svc
             namespace: '{{path.basename}}'
