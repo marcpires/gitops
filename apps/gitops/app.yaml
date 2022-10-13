@@ -5,16 +5,18 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  - git:
-      repoURL: https://github.com/marcpires/gitops.git
-      revision: HEAD
-      directories:
-       - path: envs/*
+  - matrix:
+      generators:
+      - git:
+          repoURL: https://github.com/marcpires/gitops.git
+          revision: HEAD
+          directories:
+           - path: envs/*
   template:
       metadata:
-        name: '{{path.[0]}}'
+        name: '{{path.basename}}-{{name}}'
       spec:
-        project: default
+        project: default #Can be set in application metadata.labs.environment
 
         #Application source
         source:
