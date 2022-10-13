@@ -1,0 +1,33 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+  name: root-application
+  namespace: argocd
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/marcpires/gitops.git
+      revision: HEAD
+      directories: envs/*
+       - path:
+      template:
+        metadata: '{{path.basename}}'
+        spec:
+          project: default
+          source:
+            repoURL: "https://github.com/marcpires/gitops.git"
+            targetRevision: HEAD
+            path: '{{path}}'
+          destination:
+            server: https://kubernetes.default.svc
+            namespace: '{{path.basename}}'
+
+          syncPolicy:
+            syncOptions:
+              - CreateNamespace=true
+            automated:
+              prune: true
+              selfHeal: true
+  
