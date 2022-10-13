@@ -9,7 +9,7 @@ spec:
       repoURL: https://github.com/marcpires/gitops.git
       revision: HEAD
       directories:
-       - path: envs/dev/*
+       - path: envs/*
   template:
       metadata:
         name: '{{name}}'
