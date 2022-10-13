@@ -11,16 +11,18 @@ spec:
       directories:
        - path: envs/*
   template:
-      metadata: '{{path.basename}}'
+      metadata:
+        name: '{{path.basename}}'
       spec:
         project: default
 
-          #Application source
+        #Application source
         source:
           repoURL: "https://github.com/marcpires/gitops.git"
           targetRevision: HEAD
           path: '{{path}}'
-          # Destination  
+        
+        # Destination  
         destination:
           server: https://kubernetes.default.svc
           namespace: '{{path.basename}}'
