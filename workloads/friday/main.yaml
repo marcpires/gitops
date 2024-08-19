@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: friday
   labels:
-    application-template-service: friday
+    application-template-service: friday-dev
 spec:
   replicas: 1
   template:
